@@ -1,3 +1,5 @@
+@import 'normalize';
+
 *, :after, :before {
     box-sizing: border-box;
     padding: 0;
@@ -33,18 +35,12 @@ body {
 h1, h2, h3, h4, h5, strong, b {
     font-size: inherit;
     font-weight: 600;
-    //text-transform: uppercase;
 }
 
 pre {
-    //white-space: pre-wrap;
-    //word-break: break-all
 }
 
 header {
-    //display: flex;
-    //justify-content: space-between;
-    //padding-bottom: 0.5rem;
     line-height: 2;
     padding-bottom: 1.5rem;
 }
@@ -91,7 +87,6 @@ code, pre {
     font-family: San Francisco Mono, Monaco, "Consolas", "Lucida Console","DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
     font-size: normal;
     font-size: small;
-    background: #eee
 }
 
 code {
