@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ .Site.Params.HTMLLangCode  }}">
+  {{ partial "head.html" . }}
+<body>
+  <main id="main">
+  <div class="content">
+    {{ partial "header.html" . }}
+
+    {{ range .Site.RegularPages.GroupBy "Section" }}
+    {{ if ne .Key "" }}
+<section class="list-container">
+    {{ with $.Site.GetPage "section" .Key  }}
+    <h3>{{ .Title }}</h3>
+    {{ else  }}
+    <h3>{{ .Key | title  }}</h3>
+    {{ end  }}
+  <ul reversed class="list">
+    {{ range .Pages.ByDate.Reverse }}
+      {{ if ne .Kind "section" }}
+      {{ .Render "li" }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}
+
+    {{ partial "footer.html" . }}
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<section class="list-container">
+    {{ if ne .Title "" }}
+    <h3>{{ .Title }}</h3>
+    {{ else  }}
+    <h3>{{ .CurrentSection | title  }}</h3>
+    {{ end  }}
+  <ul reversed class="list">
+    {{ $currSection := .CurrentSection }}
+    {{ range (.Paginate ( where .Site.RegularPages "Section" .Section )).Pages.ByDate.Reverse }}
+      {{ if eq .CurrentSection $currSection }}
+      {{ .Render "li" }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
