@@ -5,7 +5,7 @@
     <description>{{ .Site.Params.description }}</description>
     <link>{{ .Site.BaseURL }}</link>
     <!-- Optional channel elements -->
-    <language>en</language>
+    <language>{{ .Site.Language.LanguageName }}</language>
     <copyright>Copyright {{ now.Format "2006"}}, Su Jing-Jhong</copyright>
     <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
     <generator>Hugo - gohugo.io</generator>
