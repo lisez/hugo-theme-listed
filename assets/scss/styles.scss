@@ -18,17 +18,6 @@ body {
     }
 }
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background-color: #eee;
-  z-index: 100;
-}
-
-.skip-link:focus {
-  top: 0;
-}
 
 h1, h2, h3, h4, h5, strong, b {
     font-size: inherit;
