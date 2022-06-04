@@ -4,7 +4,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to main</a>
 <main id="main">
-  <div class="content">
+  <section class="content">
     {{ partial "header.html" . }}
       {{ if eq .Type "photos" }}
       <h2>{{ .Title }}</h2>
@@ -15,6 +15,7 @@
       {{ end }}</a>
       {{ end }}
       <h2 class="post">{{ .Title }}</h2>
+      <article>
       {{ .Content }}
       {{ if eq .Type "posts" }}
       {{ end }}
@@ -43,8 +44,9 @@
         {{ end }}
       </ul>
       {{ end }}
+      </article>
     {{ partial "footer.html" . }}
-  </div>
+  </section>
 </main>
 </body>
 </html>

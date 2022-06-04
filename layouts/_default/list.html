@@ -6,7 +6,7 @@
   <main id="main">
   <div class="content">
     {{ partial "header.html" . }}
-    <section>
+    <section class="list-container">
       <ul reversed class="list">
         {{ range (.Paginate ( where .Site.RegularPages "Section" "posts" ).ByDate.Reverse).Pages }}
           {{ if ne .Kind "section" }}
