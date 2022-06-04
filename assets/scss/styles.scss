@@ -64,7 +64,12 @@ a:visited {
 
 a:hover,
 a.heading-link {
-    text-decoration: none
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+}
+
+article a {
+    text-decoration: underline dotted #f03e3e 3px;
 }
 
 pre {
