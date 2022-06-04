@@ -5,21 +5,11 @@
   <main>
     {{ partial "header.html" . }}
     <section>
-
-
       <ul class="posts">
   {{ range .Data.Pages }}
-    <li>
-      <a href="{{.RelPermalink}}">{{ .Title }} </a>
-     
-      {{ partial "categories.html" .}}
-      <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
-    </li>
+  {{ .Render "li" }}
   {{ end }}
 </ul>
-
-
-
     </section>
     {{ partial "footer.html" . }}
   </main>
